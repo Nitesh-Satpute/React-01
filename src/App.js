@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
 
-function App() {
+export default function App() {
+  let [counter, setCounter] = useState(100);
+
+  const inc = () => setCounter(counter + 1);
+  const dec = () => setCounter(counter - 1);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Hello Worldddd</h1>
+      <h1>{counter}</h1>
+      <input
+        type="button"
+        value="inc"
+        onClick={inc}
+        style={{ marginLeft: "8px" }}
+      />
+      <h1>Hiii</h1>
     </div>
   );
 }
-
-export default App;
